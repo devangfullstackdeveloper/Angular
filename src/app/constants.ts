@@ -1,0 +1,1 @@
+export const C0NST = ['./src/app/css/bootstrap.css','./src/app/css/bootstrap-select.css','./src/app/css/font-awesome.min.css','./src/app/css/responsive.css','./src/app/css/style.css','./src/app/css/select2.css'];

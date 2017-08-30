@@ -1,0 +1,112 @@
+/****************************************************************** // CSS Reset
+*******************************************************************/
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+}
+li {
+ list-style: none;
+}
+a {
+ color: #161615;
+ text-decoration: none;
+ 
+}
+a:hover, a:focus {
+ text-decoration: none;
+ outline: none;
+}
+hr {
+ clear: both;
+ border: 1px solid #000;
+}
+p {
+ color: #333;
+ font-size: 14px;
+ line-height: 22px;
+}
+h1, h2, h3, h4, h5, h6 {
+ color: #161615;
+ font-weight: 500;
+}
+::-moz-selection {
+ color:#fff;
+ background:#00c7c9;
+ text-shadow:none;
+}
+::-ms-selection {
+ color:#fff;
+ background:#00c7c9;
+ text-shadow:none;
+}
+::selection {
+ color: #fff;
+ background: #00c7c9;
+ text-shadow: none;
+}
+
+::-webkit-input-placeholder {
+ opacity:1;
+ color:#161615 !important;
+ font-size:14px;
+ font-weight:400;
+}
+::-webkit-placeholder {
+ opacity:1;
+ color:#161615 !important;
+ font-size:14px;
+ font-weight:400;
+}
+::-moz-placeholder {
+ opacity:1;
+ color:#161615 !important;
+ font-size:14px;
+ font-weight:400;
+}
+:-ms-input-placeholder {
+ opacity:1;
+ color:#161615 !important;
+ font-size:14px;
+ font-weight:400;
+}
+:-ms-placeholder {
+ opacity:1;
+ color:#161615 !important;
+ font-size:14px;
+ font-weight:400;
+}
+
+:-0-input-placeholder {
+ opacity:1;
+ color:#161615 !important;
+ font-size:14px;
+ font-weight:400;
+}
+/******************************************************************
+// Start
+*******************************************************************/
+html {
+ -webkit-text-size-adjust: 100%;
+ -moz-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%;
+}
+html, body {
+ background-color: #669999;
+ font-family: 'Roboto', sans-serif; /*font-family: 'Open Sans', sans-serif;*/
+ -moz-font-smoothing: antialiased;
+ -webkit-font-smoothing: antialiased;
+ -webkit-text-size-adjust: 100%;
+ width: auto;
+ height: auto;
+ font-weight: 500;
+}
+a, p, h1, h2, h3, h4, h5, h6 {
+ letter-spacing: 1px;
+}
+
+.header-menu {width: 100%;}
+.header-menu ul{width: 100%;float: left;}
+.header-menu ul li{float: left; padding: 10px;background: #ccc; margin: 10px;}

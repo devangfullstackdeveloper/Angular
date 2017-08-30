@@ -1,0 +1,54 @@
+<toaster-container [toasterconfig]="toasterconfig"></toaster-container>  
+  <div  *ngIf="isTest">  
+    <section class="inner-wrapper question-test-div">
+      <div class="container">
+          <h2> 
+            <span >{{current.QuestionNo}}</span> 
+                / <span>{{questionListData.length}} </span>            
+               Generate Test
+          </h2> 
+          
+          <div class="question-test-inner-div">
+            <div class="question-section">  
+              <h4 > 
+              <span>{{current.QuestionNo}}.</span> 
+              <span [innerHtml]="current.name"> {{current.name}} </span> 
+              </h4> 
+
+              <ul class="category-listing" >  
+                <li (click)="IsAnswer()" *ngFor="let options of current.options ; let j = index" >
+                 <input id="radio{{j}}" name="radio" [(ngModel)]="answerId" value="{{options.id}}" type="radio"><label for="radio{{j}}">
+                 <span class="pointer">{{options.question_answer}}</span></label>
+                </li>       
+              </ul> 
+
+              <div *ngIf="answerShouldBe" style="color:red;clear: both;" class="alert alert-info "> Please choose one answer 
+              </div>
+
+               <div class="image-section" *ngIf="current.image">
+               <img src="{{current.image}}" onError="avatarUrl" alt="" title="">
+               </div>
+            </div>
+              <div class="call-action">
+                <ul> 
+                     
+                    <li *ngIf="questionListData.length == current.QuestionNo">
+                      <a (click)="finishTest(current.id)" href="javascript:void(0);" class="test-btn">
+                        <span>Finish</span> 
+                      </a>
+                    </li>
+                    <li *ngIf="questionListData.length != current.QuestionNo">
+                      <a (click)="nextQuestion(current.id)" href="javascript:void(0);" class="test-btn">
+                        <span>Next</span>
+                      </a>
+                    </li>
+                    <li   (click)="skipQuestion(current.id)">
+                      <a  href="javascript:void(0);" class="skip">Skip</a>
+                    </li>
+                </ul>     
+              </div>
+          </div>           
+      </div>
+    </section>
+  </div>
+  
